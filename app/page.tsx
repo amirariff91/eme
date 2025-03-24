@@ -145,6 +145,168 @@ export default function Home() {
 }`}
                         </pre>
                       </div>
+                      <div className="bg-white p-4 rounded-lg border border-purple-100">
+                        <h4 className="font-medium text-gray-900 mb-2">Event Schema Implementation</h4>
+                        <pre className="text-sm text-gray-600 bg-gray-50 p-3 rounded overflow-x-auto">
+{`{
+  "@type": "Event",
+  "name": "Sydney Food & Wine Festival 2024",
+  "description": "Annual celebration of Sydney's culinary scene featuring top chefs and winemakers",
+  "image": "URL_to_event_image",
+  "startDate": "2024-05-15T10:00:00+10:00",
+  "endDate": "2024-05-20T22:00:00+10:00",
+  "eventStatus": "EventUpcoming",
+  "eventAttendanceMode": "OfflineEventAttendanceMode",
+  "location": {
+    "@type": "Place",
+    "name": "Sydney Harbour",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Circular Quay",
+      "addressLocality": "Sydney",
+      "addressRegion": "NSW",
+      "postalCode": "2000",
+      "addressCountry": "AU"
+    }
+  },
+  "organizer": {
+    "@type": "Organization",
+    "name": "Sydney Food & Wine Festival",
+    "url": "URL_to_organizer"
+  },
+  "performer": [
+    {
+      "@type": "Organization",
+      "name": "Sydney's Top Restaurants",
+      "url": "URL_to_performer"
+    }
+  ],
+  "offers": {
+    "@type": "Offer",
+    "url": "URL_to_tickets",
+    "price": "150",
+    "priceCurrency": "AUD",
+    "availability": "https://schema.org/InStock",
+    "validFrom": "2024-03-01T00:00:00+10:00"
+  }
+}`}
+                        </pre>
+                        <div className="mt-2 text-sm text-gray-500">
+                          <p>Key features:</p>
+                          <ul className="list-disc list-inside mt-1">
+                            <li>Complete event details with dates and times</li>
+                            <li>Location information with structured address</li>
+                            <li>Organizer and performer details</li>
+                            <li>Ticket offers with pricing</li>
+                            <li>Event status and attendance mode</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div className="bg-white p-4 rounded-lg border border-purple-100">
+                        <h4 className="font-medium text-gray-900 mb-2">LocalBusiness Schema for Venues</h4>
+                        <pre className="text-sm text-gray-600 bg-gray-50 p-3 rounded overflow-x-auto">
+{`{
+  "@type": "LocalBusiness",
+  "name": "Opera Bar",
+  "image": "URL_to_venue_image",
+  "description": "Iconic waterfront bar at Sydney Opera House",
+  "@id": "URL_to_venue",
+  "url": "URL_to_venue",
+  "telephone": "+61292477777",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Bennelong Point",
+    "addressLocality": "Sydney",
+    "addressRegion": "NSW",
+    "postalCode": "2000",
+    "addressCountry": "AU"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": -33.8568,
+    "longitude": 151.2153
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "11:00",
+      "closes": "23:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Saturday", "Sunday"],
+      "opens": "10:00",
+      "closes": "00:00"
+    }
+  ],
+  "sameAs": [
+    "URL_to_facebook",
+    "URL_to_instagram",
+    "URL_to_twitter"
+  ],
+  "priceRange": "$$",
+  "servesCuisine": ["Australian", "International"],
+  "hasMap": "URL_to_google_maps"
+}`}
+                        </pre>
+                        <div className="mt-2 text-sm text-gray-500">
+                          <p>Key features:</p>
+                          <ul className="list-disc list-inside mt-1">
+                            <li>Detailed business information</li>
+                            <li>Opening hours specification</li>
+                            <li>Social media links</li>
+                            <li>Price range and cuisine types</li>
+                            <li>Geographic coordinates</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div className="bg-white p-4 rounded-lg border border-purple-100">
+                        <h4 className="font-medium text-gray-900 mb-2">NewsArticle Schema for Events</h4>
+                        <pre className="text-sm text-gray-600 bg-gray-50 p-3 rounded overflow-x-auto">
+{`{
+  "@type": "NewsArticle",
+  "headline": "Sydney Food & Wine Festival 2024: What to Expect",
+  "description": "Complete guide to Sydney's premier food and wine event",
+  "image": "URL_to_article_image",
+  "datePublished": "2024-03-20T10:00:00+10:00",
+  "dateModified": "2024-03-20T10:30:00+10:00",
+  "author": {
+    "@type": "Person",
+    "name": "Author Name",
+    "jobTitle": "Food & Wine Editor"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Sydney Travel Guide",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "URL_to_logo"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "Event",
+    "@id": "URL_to_event"
+  },
+  "about": {
+    "@type": "Event",
+    "name": "Sydney Food & Wine Festival 2024",
+    "startDate": "2024-05-15T10:00:00+10:00",
+    "endDate": "2024-05-20T22:00:00+10:00"
+  }
+}`}
+                        </pre>
+                        <div className="mt-2 text-sm text-gray-500">
+                          <p>Key features:</p>
+                          <ul className="list-disc list-inside mt-1">
+                            <li>Event-specific news article structure</li>
+                            <li>Linked event entity</li>
+                            <li>Complete author and publisher details</li>
+                            <li>Proper date formatting with timezone</li>
+                            <li>Rich media support</li>
+                          </ul>
+                        </div>
+                      </div>
                     </div>
                   </div>
 
@@ -196,7 +358,7 @@ export default function Home() {
                               <li>Most expensive cars (1.6k traffic)</li>
                               <li>Most visited cities (794 traffic)</li>
                             </ul>
-                          </li>
+          </li>
                           <li>UAE Guides & Resources
                             <ul className="list-disc list-inside ml-4 mt-1">
                               <li>Salary information (734 traffic)</li>
@@ -204,7 +366,7 @@ export default function Home() {
                               <li>Labor card procedures (689 traffic)</li>
                               <li>Gratuity calculations (604 traffic)</li>
                             </ul>
-                          </li>
+          </li>
                         </ul>
                       </div>
                       <div className="bg-white p-4 rounded-lg border border-violet-100">
@@ -672,6 +834,25 @@ export default function Home() {
                         </ul>
                       </div>
                     </div>
+                  </div>
+                </div>
+              </section>
+
+              {/* Related Strategies */}
+              <section className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
+                <div className="flex items-center space-x-2 mb-6">
+                  <span className="bg-purple-100 text-purple-600 px-3 py-1 rounded-full text-sm font-medium">Related</span>
+                  <h2 className="text-2xl font-bold text-gray-900">Related Strategies</h2>
+                </div>
+                <div className="space-y-6">
+                  <div className="bg-purple-50 p-6 rounded-xl">
+                    <h3 className="font-semibold text-purple-800 mb-2">Sydney Travel Guide Strategy</h3>
+                    <p className="text-gray-600 mb-4">
+                      For a detailed analysis of the Sydney Travel Guide's traffic growth and monetization strategy, including event schema implementation and content optimization, visit our dedicated strategy page.
+                    </p>
+                    <a href="/sydney-travel-guide" className="inline-flex items-center px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors">
+                      View Sydney Travel Guide Strategy
+                    </a>
                   </div>
                 </div>
               </section>
