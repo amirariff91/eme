@@ -1,15 +1,23 @@
-import { BellIcon, ChartBarIcon, NewspaperIcon, GlobeAltIcon, UserGroupIcon, RssIcon, CodeBracketIcon, MapIcon, ClockIcon, TableCellsIcon, ChartPieIcon } from '@heroicons/react/24/outline';
+import { BellIcon, ChartBarIcon, NewspaperIcon, GlobeAltIcon, UserGroupIcon, RssIcon, CodeBracketIcon, MapIcon, ClockIcon, TableCellsIcon, ChartPieIcon, DocumentTextIcon, BookOpenIcon, DocumentIcon } from '@heroicons/react/24/outline';
 
 export default function SydneyTravelGuide() {
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
-      <header className="fixed w-full bg-white border-b border-gray-200">
+      <header className="fixed w-full bg-white border-b border-gray-200 shadow-sm z-50">
         <div className="container">
           <nav className="flex items-center justify-between h-16">
-            <div className="flex items-center space-x-2">
-              <span className="text-xl font-bold text-purple-600">STG</span>
-              <span className="text-sm text-gray-500">Traffic Growth Strategy</span>
+            <div className="flex items-center space-x-3">
+              <span className="text-2xl font-bold text-purple-600">STG</span>
+              <span className="text-sm text-gray-500 bg-gray-100 px-3 py-1 rounded-full">Traffic Growth Strategy</span>
+            </div>
+            <div className="flex items-center space-x-4">
+              <button className="text-gray-600 hover:text-purple-600 transition-colors">
+                <ChartBarIcon className="h-5 w-5" />
+              </button>
+              <button className="text-gray-600 hover:text-purple-600 transition-colors">
+                <BellIcon className="h-5 w-5" />
+              </button>
             </div>
           </nav>
         </div>
@@ -17,18 +25,17 @@ export default function SydneyTravelGuide() {
 
       {/* Hero Section */}
       <main className="pt-20">
-        <section className="py-16 bg-gradient-to-b from-purple-50 to-white">
+        <section className="py-20 bg-gradient-to-b from-purple-50 to-white">
           <div className="container">
-            <div className="max-w-4xl mx-auto">
-              <div className="flex items-center justify-center mb-8">
-                <div className="bg-purple-100 text-purple-600 px-4 py-1 rounded-full text-sm font-medium">
-                  Sydney Travel Guide Optimization Strategy
-                </div>
+            <div className="max-w-4xl mx-auto text-center">
+              <div className="inline-flex items-center justify-center mb-8 bg-purple-100 text-purple-600 px-6 py-2 rounded-full text-sm font-medium shadow-sm">
+                <GlobeAltIcon className="h-4 w-4 mr-2" />
+                Sydney Travel Guide Optimization Strategy
               </div>
-              <h1 className="text-4xl sm:text-5xl font-bold text-center text-gray-900 mb-8">
+              <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6 leading-tight">
                 Sydney Travel Guide's Growth Strategy
               </h1>
-              <p className="text-xl text-gray-600 text-center mb-12">
+              <p className="text-xl text-gray-600 mb-12 max-w-2xl mx-auto">
                 A comprehensive approach to boost Sydney Travel Guide's authority, visibility, and revenue through strategic optimization.
               </p>
             </div>
@@ -40,39 +47,93 @@ export default function SydneyTravelGuide() {
           <div className="container">
             <div className="max-w-4xl mx-auto space-y-16">
               {/* 1. Domain Authority & Link Building */}
-              <section className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
-                <div className="flex items-center space-x-2 mb-6">
-                  <span className="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm font-medium">Foundation</span>
-                  <h2 className="text-2xl font-bold text-gray-900">Domain Authority & Link Building</h2>
+              <section className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100 hover:shadow-xl transition-shadow">
+                <div className="flex items-center space-x-3 mb-8">
+                  <div className="bg-blue-100 p-2 rounded-lg">
+                    <ChartBarIcon className="h-6 w-6 text-blue-600" />
+                  </div>
+                  <div>
+                    <span className="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm font-medium">Foundation</span>
+                    <h2 className="text-2xl font-bold text-gray-900 mt-1">Domain Authority & Link Building</h2>
+                  </div>
                 </div>
-                <div className="space-y-6">
+                <div className="space-y-8">
                   {/* Current Status */}
-                  <div className="bg-blue-50 p-6 rounded-xl">
-                    <h3 className="font-semibold text-blue-800 mb-4">Current Status & Strategy</h3>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                      <div className="bg-white p-4 rounded-lg border border-blue-100">
-                        <h4 className="font-medium text-gray-900 mb-2">Domain Metrics</h4>
-                        <ul className="text-sm text-gray-600 space-y-1">
-                          <li>Current Issues:
-                            <ul className="list-disc list-inside ml-4 mt-1">
-                              <li>Low domain rating/authority</li>
-                              <li>Limited quality backlinks</li>
-                              <li>Poor referring domains diversity</li>
-                              <li>Weak local citations</li>
-                            </ul>
+                  <div className="bg-blue-50 p-6 rounded-xl border border-blue-100">
+                    <h3 className="font-semibold text-blue-800 mb-6 flex items-center">
+                      <ChartPieIcon className="h-5 w-5 mr-2" />
+                      Current Status & Strategy
+                    </h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      <div className="bg-white p-6 rounded-lg border border-blue-100 shadow-sm hover:shadow-md transition-shadow">
+                        <h4 className="font-medium text-gray-900 mb-4 flex items-center">
+                          <TableCellsIcon className="h-5 w-5 mr-2 text-blue-600" />
+                          Domain Metrics
+                        </h4>
+                        <ul className="text-sm text-gray-600 space-y-3">
+                          <li className="flex items-start">
+                            <span className="text-red-500 mr-2">•</span>
+                            <div>
+                              <span className="font-medium">Low domain rating/authority</span>
+                              <p className="text-gray-500 mt-1">Current DR: 7 (+6), Target: 25+</p>
+                            </div>
+                          </li>
+                          <li className="flex items-start">
+                            <span className="text-red-500 mr-2">•</span>
+                            <div>
+                              <span className="font-medium">Limited quality backlinks</span>
+                              <p className="text-gray-500 mt-1">Current: 7.3K (+65), Target: 10K+</p>
+                            </div>
+                          </li>
+                          <li className="flex items-start">
+                            <span className="text-red-500 mr-2">•</span>
+                            <div>
+                              <span className="font-medium">Poor referring domains diversity</span>
+                              <p className="text-gray-500 mt-1">Current: 69, Target: 200+</p>
+                            </div>
+                          </li>
+                          <li className="flex items-start">
+                            <span className="text-red-500 mr-2">•</span>
+                            <div>
+                              <span className="font-medium">Low URL rating</span>
+                              <p className="text-gray-500 mt-1">Current UR: 2.6 (+1.4), Target: 15+</p>
+                            </div>
                           </li>
                         </ul>
                       </div>
-                      <div className="bg-white p-4 rounded-lg border border-blue-100">
-                        <h4 className="font-medium text-gray-900 mb-2">Link Building Strategy</h4>
-                        <ul className="text-sm text-gray-600 space-y-1">
-                          <li>Priority Actions:
-                            <ul className="list-disc list-inside ml-4 mt-1">
-                              <li>Submit to quality travel directories</li>
-                              <li>Local business partnerships</li>
-                              <li>Guest posting on travel blogs</li>
-                              <li>HARO responses for travel topics</li>
-                            </ul>
+                      <div className="bg-white p-6 rounded-lg border border-blue-100 shadow-sm hover:shadow-md transition-shadow">
+                        <h4 className="font-medium text-gray-900 mb-4 flex items-center">
+                          <UserGroupIcon className="h-5 w-5 mr-2 text-blue-600" />
+                          Link Building Strategy
+                        </h4>
+                        <ul className="text-sm text-gray-600 space-y-3">
+                          <li className="flex items-start">
+                            <span className="text-green-500 mr-2">•</span>
+                            <div>
+                              <span className="font-medium">Submit to quality travel directories</span>
+                              <p className="text-gray-500 mt-1">Target: 50+ directories</p>
+                            </div>
+                          </li>
+                          <li className="flex items-start">
+                            <span className="text-green-500 mr-2">•</span>
+                            <div>
+                              <span className="font-medium">Local business partnerships</span>
+                              <p className="text-gray-500 mt-1">Target: 30+ partnerships</p>
+                            </div>
+                          </li>
+                          <li className="flex items-start">
+                            <span className="text-green-500 mr-2">•</span>
+                            <div>
+                              <span className="font-medium">Guest posting on travel blogs</span>
+                              <p className="text-gray-500 mt-1">Target: 20+ guest posts</p>
+                            </div>
+                          </li>
+                          <li className="flex items-start">
+                            <span className="text-green-500 mr-2">•</span>
+                            <div>
+                              <span className="font-medium">HARO responses for travel topics</span>
+                              <p className="text-gray-500 mt-1">Target: 15+ mentions</p>
+                            </div>
                           </li>
                         </ul>
                       </div>
@@ -80,46 +141,102 @@ export default function SydneyTravelGuide() {
                   </div>
 
                   {/* Implementation Plan */}
-                  <div className="bg-indigo-50 p-6 rounded-xl">
-                    <h3 className="font-semibold text-indigo-800 mb-4">Implementation Plan</h3>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                      <div className="bg-white p-4 rounded-lg border border-indigo-100">
-                        <h4 className="font-medium text-gray-900 mb-2">Directory Submissions</h4>
-                        <ul className="text-sm text-gray-600 space-y-1">
-                          <li>Target Directories:
-                            <ul className="list-disc list-inside ml-4 mt-1">
-                              <li><a href="https://www.tripadvisor.com/Owners" className="text-blue-600 hover:underline">TripAdvisor for Business</a></li>
-                              <li><a href="https://atdw-online.com.au/" className="text-blue-600 hover:underline">Australian Tourism Data Warehouse</a></li>
-                              <li><a href="https://www.destinationnsw.com.au/destination-nsw-business-support/get-connected" className="text-blue-600 hover:underline">Destination NSW Get Connected</a></li>
-                              <li><a href="https://www.tourismaustralia.com/marketing/ATDW" className="text-blue-600 hover:underline">Tourism Australia ATDW</a></li>
-                              <li><a href="https://www.sydneyvisitor.com/add-listing" className="text-blue-600 hover:underline">Sydney Visitor</a></li>
-                              <li><a href="https://www.businessaustralia.com/how-we-help/grow-your-business/directory" className="text-blue-600 hover:underline">Business Australia Directory</a></li>
-                              <li><a href="https://www.ausleisure.com.au/directory/add-listing/" className="text-blue-600 hover:underline">Australasian Leisure Management</a></li>
-                              <li><a href="https://www.yellowpages.com.au/list-your-business" className="text-blue-600 hover:underline">Yellow Pages Australia</a></li>
+                  <div className="bg-indigo-50 p-6 rounded-xl border border-indigo-100">
+                    <h3 className="font-semibold text-indigo-800 mb-6 flex items-center">
+                      <MapIcon className="h-5 w-5 mr-2" />
+                      Implementation Plan
+                    </h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      <div className="bg-white p-6 rounded-lg border border-indigo-100 shadow-sm hover:shadow-md transition-shadow">
+                        <h4 className="font-medium text-gray-900 mb-4 flex items-center">
+                          <GlobeAltIcon className="h-5 w-5 mr-2 text-indigo-600" />
+                          Directory Submissions
+                        </h4>
+                        <div className="space-y-4">
+                          <div>
+                            <h5 className="text-sm font-medium text-gray-700 mb-2">Target Directories:</h5>
+                            <ul className="space-y-2">
+                              {[
+                                { name: 'TripAdvisor for Business', url: 'https://www.tripadvisor.com/Owners', da: '85+' },
+                                { name: 'Australian Tourism Data Warehouse', url: 'https://atdw-online.com.au/', da: '75+' },
+                                { name: 'Destination NSW Get Connected', url: 'https://www.destinationnsw.com.au/destination-nsw-business-support/get-connected', da: '80+' },
+                                { name: 'Tourism Australia ATDW', url: 'https://www.tourismaustralia.com/marketing/ATDW', da: '85+' },
+                                { name: 'Sydney Visitor', url: 'https://www.sydneyvisitor.com/add-listing', da: '55+' },
+                                { name: 'Business Australia Directory', url: 'https://www.businessaustralia.com/how-we-help/grow-your-business/directory', da: '65+' },
+                                { name: 'Australasian Leisure Management', url: 'https://www.ausleisure.com.au/directory/add-listing/', da: '50+' },
+                                { name: 'Yellow Pages Australia', url: 'https://www.yellowpages.com.au/list-your-business', da: '75+' }
+                              ].map((dir, index) => (
+                                <li key={index} className="flex items-center justify-between p-2 bg-gray-50 rounded hover:bg-gray-100 transition-colors">
+                                  <a href={dir.url} className="text-sm text-blue-600 hover:underline flex-1">{dir.name}</a>
+                                  <span className="text-xs text-gray-500 bg-gray-200 px-2 py-1 rounded">DA {dir.da}</span>
+                                </li>
+                              ))}
                             </ul>
-                          </li>
-                          <li className="mt-2">Benefits:
-                            <ul className="list-disc list-inside ml-4 mt-1">
-                              <li>Enhanced local visibility</li>
-                              <li>Quality backlinks from DA70+ domains</li>
-                              <li>Improved local SEO signals</li>
-                              <li>Increased referral traffic</li>
+                          </div>
+                          <div className="mt-4">
+                            <h5 className="text-sm font-medium text-gray-700 mb-2">Benefits:</h5>
+                            <ul className="grid grid-cols-2 gap-2">
+                              <li className="flex items-center text-sm text-gray-600">
+                                <span className="text-green-500 mr-2">✓</span>
+                                Enhanced local visibility
+                              </li>
+                              <li className="flex items-center text-sm text-gray-600">
+                                <span className="text-green-500 mr-2">✓</span>
+                                Quality backlinks
+                              </li>
+                              <li className="flex items-center text-sm text-gray-600">
+                                <span className="text-green-500 mr-2">✓</span>
+                                Improved local SEO
+                              </li>
+                              <li className="flex items-center text-sm text-gray-600">
+                                <span className="text-green-500 mr-2">✓</span>
+                                Increased referral traffic
+                              </li>
                             </ul>
-                          </li>
-                        </ul>
+                          </div>
+                        </div>
                       </div>
-                      <div className="bg-white p-4 rounded-lg border border-indigo-100">
-                        <h4 className="font-medium text-gray-900 mb-2">Outreach Campaign</h4>
-                        <ul className="text-sm text-gray-600 space-y-1">
-                          <li>Strategic Partnerships:
-                            <ul className="list-disc list-inside ml-4 mt-1">
-                              <li>Local tour operators</li>
-                              <li>Sydney-based travel bloggers</li>
-                              <li>Tourism organizations</li>
-                              <li>Event organizers</li>
-                            </ul>
-                          </li>
-                        </ul>
+                      <div className="bg-white p-6 rounded-lg border border-indigo-100 shadow-sm hover:shadow-md transition-shadow">
+                        <h4 className="font-medium text-gray-900 mb-4 flex items-center">
+                          <UserGroupIcon className="h-5 w-5 mr-2 text-indigo-600" />
+                          Outreach Campaign
+                        </h4>
+                        <div className="space-y-4">
+                          {[
+                            {
+                              title: 'Strategic Partnerships',
+                              items: ['Local tour operators', 'Sydney-based travel bloggers', 'Tourism organizations', 'Event organizers']
+                            },
+                            {
+                              title: 'Content Collaboration',
+                              items: ['Co-create event guides with venues', 'Develop neighborhood guides with local experts', 'Create food & drink guides with restaurants', 'Partner on seasonal content']
+                            },
+                            {
+                              title: 'Local Authority Building',
+                              items: ['Contribute to City of Sydney blog', 'Partner with Destination NSW', 'Collaborate with Tourism Australia', 'Work with local tourism boards']
+                            },
+                            {
+                              title: 'Industry Engagement',
+                              items: ['Join Sydney Tourism Alliance', 'Participate in tourism conferences', 'Network with hotel associations', 'Engage with restaurant groups']
+                            },
+                            {
+                              title: 'Content Distribution',
+                              items: ['Submit to travel aggregators', 'Share with tourism directories', 'Distribute to local media', 'Partner with travel platforms']
+                            }
+                          ].map((section, index) => (
+                            <div key={index} className="border-b border-gray-100 last:border-0 pb-4 last:pb-0">
+                              <h5 className="text-sm font-medium text-gray-700 mb-2">{section.title}:</h5>
+                              <ul className="grid grid-cols-2 gap-2">
+                                {section.items.map((item, itemIndex) => (
+                                  <li key={itemIndex} className="flex items-center text-sm text-gray-600">
+                                    <span className="text-indigo-500 mr-2">•</span>
+                                    {item}
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                          ))}
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -127,91 +244,153 @@ export default function SydneyTravelGuide() {
               </section>
 
               {/* 2. E-E-A-T & Technical Foundation */}
-              <section className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
-                <div className="flex items-center space-x-2 mb-6">
-                  <span className="bg-purple-100 text-purple-600 px-3 py-1 rounded-full text-sm font-medium">Core</span>
-                  <h2 className="text-2xl font-bold text-gray-900">E-E-A-T & Technical Foundation</h2>
+              <section className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100 hover:shadow-xl transition-shadow">
+                <div className="flex items-center space-x-3 mb-8">
+                  <div className="bg-purple-100 p-2 rounded-lg">
+                    <CodeBracketIcon className="h-6 w-6 text-purple-600" />
+                  </div>
+                  <div>
+                    <span className="bg-purple-100 text-purple-600 px-3 py-1 rounded-full text-sm font-medium">Core</span>
+                    <h2 className="text-2xl font-bold text-gray-900 mt-1">E-E-A-T & Technical Foundation</h2>
+                  </div>
                 </div>
-                <div className="space-y-6">
+                <div className="space-y-8">
                   {/* E-E-A-T Enhancement */}
-                  <div className="bg-purple-50 p-6 rounded-xl">
-                    <h3 className="font-semibold text-purple-800 mb-4">E-E-A-T Enhancement</h3>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                      <div className="bg-white p-4 rounded-lg border border-purple-100">
-                        <h4 className="font-medium text-gray-900 mb-2">Author Expertise</h4>
-                        <ul className="text-sm text-gray-600 space-y-1">
-                          <li>Implementation:
-                            <ul className="list-disc list-inside ml-4 mt-1">
-                              <li>Detailed author bios</li>
-                              <li>Credentials display</li>
-                              <li>Social proof integration</li>
-                              <li>Expert contributions</li>
-                            </ul>
-                          </li>
-                        </ul>
+                  <div className="bg-purple-50 p-6 rounded-xl border border-purple-100">
+                    <h3 className="font-semibold text-purple-800 mb-6 flex items-center">
+                      <NewspaperIcon className="h-5 w-5 mr-2" />
+                      E-E-A-T Enhancement
+                    </h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      <div className="bg-white p-6 rounded-lg border border-purple-100 shadow-sm hover:shadow-md transition-shadow">
+                        <h4 className="font-medium text-gray-900 mb-4 flex items-center">
+                          <UserGroupIcon className="h-5 w-5 mr-2 text-purple-600" />
+                          Author Expertise
+                        </h4>
+                        <div className="space-y-4">
+                          {[
+                            {
+                              title: 'Detailed Author Bios',
+                              description: 'Comprehensive background and credentials',
+                              icon: '👤'
+                            },
+                            {
+                              title: 'Credentials Display',
+                              description: 'Professional qualifications and experience',
+                              icon: '🎓'
+                            },
+                            {
+                              title: 'Social Proof Integration',
+                              description: 'Testimonials and recognition',
+                              icon: '⭐'
+                            },
+                            {
+                              title: 'Expert Contributions',
+                              description: 'Industry publications and speaking engagements',
+                              icon: '📚'
+                            }
+                          ].map((item, index) => (
+                            <div key={index} className="flex items-start space-x-3 p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                              <span className="text-2xl">{item.icon}</span>
+                              <div>
+                                <h5 className="font-medium text-gray-900">{item.title}</h5>
+                                <p className="text-sm text-gray-500">{item.description}</p>
+                              </div>
+                            </div>
+                          ))}
+                        </div>
                       </div>
-                      <div className="bg-white p-4 rounded-lg border border-purple-100">
-                        <h4 className="font-medium text-gray-900 mb-2">Content Authority</h4>
-                        <ul className="text-sm text-gray-600 space-y-1">
-                          <li>Enhancement:
-                            <ul className="list-disc list-inside ml-4 mt-1">
-                              <li>First-hand experience emphasis</li>
-                              <li>Local expert citations</li>
-                              <li>Fact verification process</li>
-                              <li>Regular content updates</li>
-                            </ul>
-                          </li>
-                        </ul>
+                      <div className="bg-white p-6 rounded-lg border border-purple-100 shadow-sm hover:shadow-md transition-shadow">
+                        <h4 className="font-medium text-gray-900 mb-4 flex items-center">
+                          <ChartBarIcon className="h-5 w-5 mr-2 text-purple-600" />
+                          Content Authority
+                        </h4>
+                        <div className="space-y-4">
+                          {[
+                            {
+                              title: 'First-hand Experience',
+                              description: 'Personal visits and authentic reviews',
+                              icon: '✈️'
+                            },
+                            {
+                              title: 'Local Expert Citations',
+                              description: 'Quotes from industry professionals',
+                              icon: '🗣️'
+                            },
+                            {
+                              title: 'Fact Verification',
+                              description: 'Regular content updates and checks',
+                              icon: '✅'
+                            },
+                            {
+                              title: 'Regular Updates',
+                              description: 'Monthly content refresh schedule',
+                              icon: '🔄'
+                            }
+                          ].map((item, index) => (
+                            <div key={index} className="flex items-start space-x-3 p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                              <span className="text-2xl">{item.icon}</span>
+                              <div>
+                                <h5 className="font-medium text-gray-900">{item.title}</h5>
+                                <p className="text-sm text-gray-500">{item.description}</p>
+                              </div>
+                            </div>
+                          ))}
+                        </div>
                       </div>
                     </div>
                   </div>
 
                   {/* Technical Optimization */}
-                  <div className="bg-indigo-50 p-6 rounded-xl">
-                    <h3 className="font-semibold text-indigo-800 mb-4">Technical Foundation</h3>
+                  <div className="bg-indigo-50 p-6 rounded-xl border border-indigo-100">
+                    <h3 className="font-semibold text-indigo-800 mb-6 flex items-center">
+                      <CodeBracketIcon className="h-5 w-5 mr-2" />
+                      Technical Foundation
+                    </h3>
                     <div className="space-y-6">
-                      <div className="bg-white p-4 rounded-lg border border-indigo-100">
-                        <h4 className="font-medium text-gray-900 mb-2">Schema Implementation</h4>
-                        <ul className="text-sm text-gray-600 space-y-1">
-                          <li>Priority Schemas:
-                            <ul className="list-disc list-inside ml-4 mt-1">
-                              <li>Event Coverage:
-                                <ul className="ml-4 mt-1 list-disc list-inside text-gray-500">
-                                  <li>Event schema for festivals, concerts, exhibitions</li>
-                                  <li>EventSeries for recurring events</li>
-                                  <li>PerformingGroup for artists/performers</li>
-                                  <li>Place schema for venues</li>
-                                </ul>
-                              </li>
-                              <li>Travel Content:
-                                <ul className="ml-4 mt-1 list-disc list-inside text-gray-500">
-                                  <li>TravelGuide for area guides</li>
-                                  <li>TouristAttraction for landmarks</li>
-                                  <li>TouristDestination for regions</li>
-                                  <li>Trip for itineraries</li>
-                                </ul>
-                              </li>
-                              <li>Food & Dining:
-                                <ul className="ml-4 mt-1 list-disc list-inside text-gray-500">
-                                  <li>Restaurant for venue listings</li>
-                                  <li>FoodEvent for festivals</li>
-                                  <li>Review for restaurant reviews</li>
-                                  <li>Menu for special offerings</li>
-                                </ul>
-                              </li>
-                              <li>News & Articles:
-                                <ul className="ml-4 mt-1 list-disc list-inside text-gray-500">
-                                  <li>NewsArticle for time-sensitive content</li>
-                                  <li>Article for evergreen content</li>
-                                  <li>ImageGallery for photo essays</li>
-                                </ul>
-                              </li>
-                            </ul>
-                          </li>
-                          <li className="mt-4">Implementation Examples:
-                            <ul className="list-disc list-inside ml-4 mt-1">
-                              <li>Event Schema:
-                                <pre className="text-xs bg-gray-50 p-2 rounded mt-1 overflow-x-auto">
+                      <div className="bg-white p-6 rounded-lg border border-indigo-100 shadow-sm hover:shadow-md transition-shadow">
+                        <h4 className="font-medium text-gray-900 mb-4 flex items-center">
+                          <RssIcon className="h-5 w-5 mr-2 text-indigo-600" />
+                          Schema Implementation
+                        </h4>
+                        <div className="space-y-6">
+                          <div>
+                            <h5 className="text-sm font-medium text-gray-700 mb-3">Priority Schemas:</h5>
+                            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                              {[
+                                {
+                                  title: 'Event Coverage',
+                                  items: ['Event schema for festivals', 'EventSeries for recurring events', 'PerformingGroup for artists', 'Place schema for venues']
+                                },
+                                {
+                                  title: 'Travel Content',
+                                  items: ['TravelGuide for area guides', 'TouristAttraction for landmarks', 'TouristDestination for regions', 'Trip for itineraries']
+                                },
+                                {
+                                  title: 'Food & Dining',
+                                  items: ['Restaurant for venue listings', 'FoodEvent for festivals', 'Review for restaurant reviews', 'Menu for special offerings']
+                                }
+                              ].map((category, index) => (
+                                <div key={index} className="bg-gray-50 p-4 rounded-lg">
+                                  <h6 className="font-medium text-gray-900 mb-2">{category.title}</h6>
+                                  <ul className="space-y-2">
+                                    {category.items.map((item, itemIndex) => (
+                                      <li key={itemIndex} className="flex items-center text-sm text-gray-600">
+                                        <span className="text-indigo-500 mr-2">•</span>
+                                        {item}
+                                      </li>
+                                    ))}
+                                  </ul>
+                                </div>
+                              ))}
+                            </div>
+                          </div>
+                          <div>
+                            <h5 className="text-sm font-medium text-gray-700 mb-3">Implementation Approaches:</h5>
+                            <div className="space-y-4">
+                              <div className="bg-gray-50 p-4 rounded-lg">
+                                <h6 className="font-medium text-gray-900 mb-2">Manual Implementation</h6>
+                                <pre className="text-xs bg-gray-100 p-3 rounded overflow-x-auto">
 {`{
   "@context": "https://schema.org",
   "@type": "Event",
@@ -256,121 +435,126 @@ export default function SydneyTravelGuide() {
   ]
 }`}
                                 </pre>
-                              </li>
-                              <li className="mt-2">News Coverage Schema:
-                                <pre className="text-xs bg-gray-50 p-2 rounded mt-1 overflow-x-auto">
-{`{
-  "@context": "https://schema.org",
-  "@type": "NewsArticle",
-  "headline": "Sydney Food & Wine Festival Returns with International Chefs",
-  "description": "The Sydney Food & Wine Festival is back for 2024...",
-  "datePublished": "2024-03-15T09:00:00+10:00",
-  "dateModified": "2024-03-15T09:30:00+10:00",
-  "author": {
-    "@type": "Person",
-    "name": "Sarah Johnson",
-    "url": "https://www.sydneytravelguide.com.au/author/sarah-johnson"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Sydney Travel Guide",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://www.sydneytravelguide.com.au/logo.png"
-    }
-  },
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://www.sydneytravelguide.com.au/news/food-festival-2024"
-  },
-  "about": {
-    "@type": "Event",
-    "name": "Sydney Food & Wine Festival 2024"
-  }
-}`}
-                                </pre>
-                              </li>
-                              <li className="mt-2">Restaurant Review Schema:
-                                <pre className="text-xs bg-gray-50 p-2 rounded mt-1 overflow-x-auto">
-{`{
-  "@context": "https://schema.org",
-  "@type": "Review",
-  "itemReviewed": {
-    "@type": "Restaurant",
-    "name": "Opera Bar",
-    "servesCuisine": ["Australian", "Seafood"],
-    "priceRange": "$$$",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Lower Concourse Level",
-      "addressLocality": "Sydney",
-      "addressRegion": "NSW",
-      "postalCode": "2000",
-      "addressCountry": "AU"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": -33.8568,
-      "longitude": 151.2153
-    },
-    "telephone": "+61292474330",
-    "openingHoursSpecification": [{
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-      "opens": "11:30",
-      "closes": "00:00"
-    }]
-  },
-  "reviewRating": {
-    "@type": "Rating",
-    "ratingValue": "4.5",
-    "bestRating": "5"
-  },
-  "author": {
-    "@type": "Person",
-    "name": "Michael Chen",
-    "url": "https://www.sydneytravelguide.com.au/author/michael-chen"
-  },
-  "datePublished": "2024-03-10T18:00:00+10:00"
-}`}
-                                </pre>
-                              </li>
-                            </ul>
-                          </li>
-                        </ul>
+                              </div>
+                              <div className="bg-gray-50 p-4 rounded-lg">
+                                <h6 className="font-medium text-gray-900 mb-2">Automated Implementation (Events Calendar Plugin)</h6>
+                                <div className="space-y-3">
+                                  <div className="flex items-center text-sm text-gray-600">
+                                    <span className="text-green-500 mr-2">✓</span>
+                                    Install and configure Events Calendar plugin
+                                  </div>
+                                  <div className="flex items-center text-sm text-gray-600">
+                                    <span className="text-green-500 mr-2">✓</span>
+                                    Configure automatic schema generation
+                                  </div>
+                                  <div className="flex items-center text-sm text-gray-600">
+                                    <span className="text-green-500 mr-2">✓</span>
+                                    Set up event categories and taxonomies
+                                  </div>
+                                  <div className="flex items-center text-sm text-gray-600">
+                                    <span className="text-green-500 mr-2">✓</span>
+                                    Enable venue and organizer management
+                                  </div>
+                                  <div className="flex items-center text-sm text-gray-600">
+                                    <span className="text-green-500 mr-2">✓</span>
+                                    Configure recurring event support
+                                  </div>
+                                  <div className="flex items-center text-sm text-gray-600">
+                                    <span className="text-green-500 mr-2">✓</span>
+                                    Set up ticket integration
+                                  </div>
+                                </div>
+                                <div className="mt-4 p-3 bg-gray-100 rounded">
+                                  <p className="text-sm font-medium text-gray-700 mb-2">Example: Weekend Events Article</p>
+                                  <p className="text-xs text-gray-500">Each event in the article automatically generates its own schema markup:</p>
+                                  <ul className="mt-2 space-y-1">
+                                    {['Annie the Musical', 'Dua Lipa Concert', 'Sail on Duyfken', 'Sydney Streets—Redfern St', 'Bloom Theatre Show', 'Lakemba Nights'].map((event, index) => (
+                                      <li key={index} className="flex items-center text-xs text-gray-600">
+                                        <span className="text-indigo-500 mr-2">•</span>
+                                        {event}
+                                      </li>
+                                    ))}
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
                       </div>
 
-                      <div className="bg-white p-4 rounded-lg border border-indigo-100">
-                        <h4 className="font-medium text-gray-900 mb-2">Core Web Vitals & Technical Issues</h4>
-                        <ul className="text-sm text-gray-600 space-y-1">
-                          <li>Current Status:
-                            <ul className="list-disc list-inside ml-4 mt-1">
-                              <li>Good Core Web Vitals scores in Search Console</li>
-                              <li>Speed Index needs optimization</li>
-                              <li>Mobile performance score: 85</li>
-                            </ul>
-                          </li>
-                          <li className="mt-2">Speed Index Optimization:
-                            <ul className="list-disc list-inside ml-4 mt-1">
-                              <li>Optimize critical rendering path</li>
-                              <li>Implement resource prioritization</li>
-                              <li>Enhance server response time</li>
-                              <li>Optimize image delivery</li>
-                            </ul>
-                          </li>
-                          <li className="mt-2">Technical Issues:
-                            <ul className="list-disc list-inside ml-4 mt-1">
-                              <li>Robots.txt Configuration:
-                                <ul className="ml-4 mt-1 list-disc list-inside text-gray-500">
-                                  <li>Remove overly restrictive "Disallow: */?*" rule</li>
-                                  <li>Allow pagination parameters</li>
-                                  <li>Allow legitimate URL parameters</li>
-                                  <li>Update to more specific disallow rules</li>
-                                </ul>
-                              </li>
-                            </ul>
-                          </li>
-                        </ul>
+                      <div className="bg-white p-6 rounded-lg border border-indigo-100 shadow-sm hover:shadow-md transition-shadow">
+                        <h4 className="font-medium text-gray-900 mb-4 flex items-center">
+                          <ChartBarIcon className="h-5 w-5 mr-2 text-indigo-600" />
+                          Core Web Vitals & Technical Issues
+                        </h4>
+                        <div className="space-y-6">
+                          <div>
+                            <h5 className="text-sm font-medium text-gray-700 mb-3">Current Status:</h5>
+                            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                              <div className="bg-green-50 p-4 rounded-lg">
+                                <div className="flex items-center justify-between mb-2">
+                                  <span className="text-sm font-medium text-green-800">Core Web Vitals</span>
+                                  <span className="text-green-500">✓</span>
+                                </div>
+                                <p className="text-sm text-gray-600">Good scores in Search Console</p>
+                              </div>
+                              <div className="bg-yellow-50 p-4 rounded-lg">
+                                <div className="flex items-center justify-between mb-2">
+                                  <span className="text-sm font-medium text-yellow-800">Speed Index</span>
+                                  <span className="text-yellow-500">⚠️</span>
+                                </div>
+                                <p className="text-sm text-gray-600">Needs optimization</p>
+                              </div>
+                              <div className="bg-blue-50 p-4 rounded-lg">
+                                <div className="flex items-center justify-between mb-2">
+                                  <span className="text-sm font-medium text-blue-800">Mobile Performance</span>
+                                  <span className="text-blue-500">85</span>
+                                </div>
+                                <p className="text-sm text-gray-600">Score out of 100</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div>
+                            <h5 className="text-sm font-medium text-gray-700 mb-3">Speed Index Optimization:</h5>
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                              {[
+                                'Optimize critical rendering path',
+                                'Implement resource prioritization',
+                                'Enhance server response time',
+                                'Optimize image delivery'
+                              ].map((item, index) => (
+                                <div key={index} className="flex items-center p-3 bg-gray-50 rounded-lg">
+                                  <span className="text-blue-500 mr-2">⚡</span>
+                                  <span className="text-sm text-gray-600">{item}</span>
+                                </div>
+                              ))}
+                            </div>
+                          </div>
+                          <div>
+                            <h5 className="text-sm font-medium text-gray-700 mb-3">Technical Issues:</h5>
+                            <div className="bg-red-50 p-4 rounded-lg">
+                              <h6 className="font-medium text-red-800 mb-2">Robots.txt Configuration</h6>
+                              <div className="space-y-2">
+                                <div className="flex items-center text-sm text-gray-600">
+                                  <span className="text-red-500 mr-2">✗</span>
+                                  <span>Remove overly restrictive "Disallow: */?*" rule</span>
+                                </div>
+                                <div className="flex items-center text-sm text-gray-600">
+                                  <span className="text-green-500 mr-2">✓</span>
+                                  Allow pagination parameters
+                                </div>
+                                <div className="flex items-center text-sm text-gray-600">
+                                  <span className="text-green-500 mr-2">✓</span>
+                                  Allow legitimate URL parameters
+                                </div>
+                                <div className="flex items-center text-sm text-gray-600">
+                                  <span className="text-green-500 mr-2">✓</span>
+                                  Update to more specific disallow rules
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -378,198 +562,344 @@ export default function SydneyTravelGuide() {
               </section>
 
               {/* 3. Content Strategy */}
-              <section className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
-                <div className="flex items-center space-x-2 mb-6">
-                  <span className="bg-green-100 text-green-600 px-3 py-1 rounded-full text-sm font-medium">Phase 2</span>
-                  <h2 className="text-2xl font-bold text-gray-900">Content Strategy</h2>
+              <section className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100 hover:shadow-xl transition-shadow">
+                <div className="flex items-center space-x-3 mb-8">
+                  <div className="bg-green-100 p-2 rounded-lg">
+                    <NewspaperIcon className="h-6 w-6 text-green-600" />
+                  </div>
+                  <div>
+                    <span className="bg-green-100 text-green-600 px-3 py-1 rounded-full text-sm font-medium">Phase 2</span>
+                    <h2 className="text-2xl font-bold text-gray-900 mt-1">Content Strategy</h2>
+                  </div>
                 </div>
-                <div className="space-y-6">
+                <div className="space-y-8">
                   {/* Content Structure */}
-                  <div className="bg-violet-50 p-6 rounded-xl">
-                    <h3 className="font-semibold text-violet-800 mb-2">Content Organization</h3>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                      <div className="bg-white p-4 rounded-lg border border-violet-100">
-                        <h4 className="font-medium text-gray-900 mb-2">Primary Categories</h4>
-                        <ul className="text-sm text-gray-600 space-y-1">
-                          <li>News & Events
-                            <ul className="list-disc list-inside ml-4 mt-1">
-                              <li>Festival coverage</li>
-                              <li>Event announcements</li>
-                              <li>Local news</li>
-                              <li>Entertainment updates</li>
-                            </ul>
-                          </li>
-                          <li>Food & Drink
-                            <ul className="list-disc list-inside ml-4 mt-1">
-                              <li>Restaurant reviews</li>
-                              <li>Food festivals</li>
-                              <li>Bar guides</li>
-                              <li>Culinary events</li>
-                            </ul>
-                          </li>
-                          <li>Entertainment
-                            <ul className="list-disc list-inside ml-4 mt-1">
-                              <li>Shows & performances</li>
-                              <li>Live music</li>
-                              <li>Theater & arts</li>
-                              <li>Nightlife</li>
-                            </ul>
-                          </li>
-                        </ul>
+                  <div className="bg-violet-50 p-6 rounded-xl border border-violet-100">
+                    <h3 className="font-semibold text-violet-800 mb-6 flex items-center">
+                      <TableCellsIcon className="h-5 w-5 mr-2" />
+                      Content Organization
+                    </h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      <div className="bg-white p-6 rounded-lg border border-violet-100 shadow-sm hover:shadow-md transition-shadow">
+                        <h4 className="font-medium text-gray-900 mb-4 flex items-center">
+                          <MapIcon className="h-5 w-5 mr-2 text-violet-600" />
+                          Primary Categories
+                        </h4>
+                        <div className="space-y-4">
+                          {[
+                            {
+                              title: 'News & Events',
+                              items: ['Festival coverage', 'Event announcements', 'Local news', 'Entertainment updates'],
+                              icon: '📰'
+                            },
+                            {
+                              title: 'Food & Drink',
+                              items: ['Restaurant reviews', 'Food festivals', 'Bar guides', 'Culinary events'],
+                              icon: '🍽️'
+                            },
+                            {
+                              title: 'Entertainment',
+                              items: ['Shows & performances', 'Live music', 'Theater & arts', 'Nightlife'],
+                              icon: '🎭'
+                            }
+                          ].map((category, index) => (
+                            <div key={index} className="bg-gray-50 p-4 rounded-lg">
+                              <div className="flex items-center mb-3">
+                                <span className="text-2xl mr-3">{category.icon}</span>
+                                <h5 className="font-medium text-gray-900">{category.title}</h5>
+                              </div>
+                              <ul className="space-y-2">
+                                {category.items.map((item, itemIndex) => (
+                                  <li key={itemIndex} className="flex items-center text-sm text-gray-600">
+                                    <span className="text-violet-500 mr-2">•</span>
+                                    {item}
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                          ))}
+                        </div>
                       </div>
-                      <div className="bg-white p-4 rounded-lg border border-violet-100">
-                        <h4 className="font-medium text-gray-900 mb-2">Content Types</h4>
-                        <ul className="text-sm text-gray-600 space-y-1">
-                          <li>Event Coverage
-                            <ul className="list-disc list-inside ml-4 mt-1">
-                              <li>Live updates</li>
-                              <li>Photo galleries</li>
-                              <li>Video content</li>
-                              <li>Social media integration</li>
-                            </ul>
-                          </li>
-                          <li>Travel Guides
-                            <ul className="list-disc list-inside ml-4 mt-1">
-                              <li>Area guides</li>
-                              <li>Itineraries</li>
-                              <li>Tips & tricks</li>
-                              <li>Local insights</li>
-                            </ul>
-                          </li>
-                          <li>Reviews
-                            <ul className="list-disc list-inside ml-4 mt-1">
-                              <li>Venue reviews</li>
-                              <li>Experience ratings</li>
-                              <li>User testimonials</li>
-                              <li>Expert opinions</li>
-                            </ul>
-                          </li>
-                        </ul>
+                      <div className="bg-white p-6 rounded-lg border border-violet-100 shadow-sm hover:shadow-md transition-shadow">
+                        <h4 className="font-medium text-gray-900 mb-4 flex items-center">
+                          <DocumentTextIcon className="h-5 w-5 mr-2 text-violet-600" />
+                          Content Types
+                        </h4>
+                        <div className="space-y-4">
+                          {[
+                            {
+                              title: 'Event Coverage',
+                              items: ['Live updates', 'Photo galleries', 'Video content', 'Social media integration'],
+                              icon: '📸'
+                            },
+                            {
+                              title: 'Travel Guides',
+                              items: ['Area guides', 'Itineraries', 'Tips & tricks', 'Local insights'],
+                              icon: '🗺️'
+                            },
+                            {
+                              title: 'Reviews',
+                              items: ['Venue reviews', 'Experience ratings', 'User testimonials', 'Expert opinions'],
+                              icon: '⭐'
+                            }
+                          ].map((type, index) => (
+                            <div key={index} className="bg-gray-50 p-4 rounded-lg">
+                              <div className="flex items-center mb-3">
+                                <span className="text-2xl mr-3">{type.icon}</span>
+                                <h5 className="font-medium text-gray-900">{type.title}</h5>
+                              </div>
+                              <ul className="space-y-2">
+                                {type.items.map((item, itemIndex) => (
+                                  <li key={itemIndex} className="flex items-center text-sm text-gray-600">
+                                    <span className="text-violet-500 mr-2">•</span>
+                                    {item}
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                          ))}
+                        </div>
                       </div>
                     </div>
                   </div>
 
                   {/* Content Quality */}
-                  <div className="bg-emerald-50 p-6 rounded-xl">
-                    <h3 className="font-semibold text-emerald-800 mb-2">Content Quality Enhancement</h3>
+                  <div className="bg-emerald-50 p-6 rounded-xl border border-emerald-100">
+                    <h3 className="font-semibold text-emerald-800 mb-6 flex items-center">
+                      <ChartBarIcon className="h-5 w-5 mr-2" />
+                      Content Quality Enhancement
+                    </h3>
                     <div className="space-y-6">
                       {/* Case Study */}
-                      <div className="bg-white p-4 rounded-lg border border-emerald-100">
-                        <h4 className="font-medium text-gray-900 mb-2">Case Study: Event Coverage Analysis</h4>
-                        <div className="space-y-4">
+                      <div className="bg-white p-6 rounded-lg border border-emerald-100 shadow-sm hover:shadow-md transition-shadow">
+                        <h4 className="font-medium text-gray-900 mb-4 flex items-center">
+                          <DocumentIcon className="h-5 w-5 mr-2 text-emerald-600" />
+                          Case Study: Event Coverage Analysis
+                        </h4>
+                        <div className="space-y-6">
                           <div>
-                            <h5 className="text-sm font-medium text-gray-700">Billie Eilish Concert Coverage Comparison</h5>
-                            <div className="mt-2">
-                              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                <div className="bg-red-50 p-3 rounded">
-                                  <p className="text-sm font-medium text-red-800 mb-2">STG Areas for Improvement:</p>
-                                  <ul className="text-sm text-gray-600 space-y-1 list-disc list-inside">
-                                    <li>Limited practical information
-                                      <ul className="ml-4 mt-1 list-disc list-inside text-gray-500">
-                                        <li>Missing venue rules and restrictions</li>
-                                        <li>Incomplete transportation details</li>
-                                        <li>No bag policy information</li>
-                                      </ul>
-                                    </li>
-                                    <li>Basic event coverage
-                                      <ul className="ml-4 mt-1 list-disc list-inside text-gray-500">
-                                        <li>Missing support act details</li>
-                                        <li>Limited venue-specific guidance</li>
-                                        <li>No crowd management tips</li>
-                                      </ul>
-                                    </li>
-                                    <li>User experience gaps
-                                      <ul className="ml-4 mt-1 list-disc list-inside text-gray-500">
-                                        <li>No clear section navigation</li>
-                                        <li>Missing visual aids/maps</li>
-                                        <li>Limited social sharing options</li>
-                                      </ul>
-                                    </li>
-                                  </ul>
+                            <h5 className="text-sm font-medium text-gray-700 mb-4">Billie Eilish Concert Coverage Comparison</h5>
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                              <div className="bg-red-50 p-4 rounded-lg border border-red-100">
+                                <div className="flex items-center mb-3">
+                                  <span className="text-red-500 mr-2">⚠️</span>
+                                  <p className="text-sm font-medium text-red-800">STG Areas for Improvement</p>
                                 </div>
-                                <div className="bg-green-50 p-3 rounded">
-                                  <p className="text-sm font-medium text-green-800 mb-2">Time Out Best Practices:</p>
-                                  <ul className="text-sm text-gray-600 space-y-1 list-disc list-inside">
-                                    <li>Comprehensive event details
-                                      <ul className="ml-4 mt-1 list-disc list-inside text-gray-500">
-                                        <li>Complete venue guidelines</li>
-                                        <li>Detailed transport options</li>
-                                        <li>Clear bag policy</li>
-                                      </ul>
-                                    </li>
-                                    <li>Enhanced user value
-                                      <ul className="ml-4 mt-1 list-disc list-inside text-gray-500">
-                                        <li>Support act background</li>
-                                        <li>Full setlist information</li>
-                                        <li>Practical tips (timing, arrival)</li>
-                                      </ul>
-                                    </li>
-                                    <li>Better content structure
-                                      <ul className="ml-4 mt-1 list-disc list-inside text-gray-500">
-                                        <li>Clear section headings</li>
-                                        <li>Easy navigation</li>
-                                        <li>Mobile-optimized layout</li>
-                                      </ul>
-                                    </li>
-                                  </ul>
+                                <div className="space-y-4">
+                                  <div>
+                                    <h6 className="text-sm font-medium text-red-700 mb-2">Limited practical information</h6>
+                                    <ul className="space-y-2">
+                                      <li className="flex items-start text-sm text-gray-600">
+                                        <span className="text-red-500 mr-2">•</span>
+                                        <span>Missing venue rules and restrictions</span>
+                                      </li>
+                                      <li className="flex items-start text-sm text-gray-600">
+                                        <span className="text-red-500 mr-2">•</span>
+                                        <span>Incomplete transportation details</span>
+                                      </li>
+                                      <li className="flex items-start text-sm text-gray-600">
+                                        <span className="text-red-500 mr-2">•</span>
+                                        <span>No bag policy information</span>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                  <div>
+                                    <h6 className="text-sm font-medium text-red-700 mb-2">Basic event coverage</h6>
+                                    <ul className="space-y-2">
+                                      <li className="flex items-start text-sm text-gray-600">
+                                        <span className="text-red-500 mr-2">•</span>
+                                        <span>Missing support act details</span>
+                                      </li>
+                                      <li className="flex items-start text-sm text-gray-600">
+                                        <span className="text-red-500 mr-2">•</span>
+                                        <span>Limited venue-specific guidance</span>
+                                      </li>
+                                      <li className="flex items-start text-sm text-gray-600">
+                                        <span className="text-red-500 mr-2">•</span>
+                                        <span>No crowd management tips</span>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                  <div>
+                                    <h6 className="text-sm font-medium text-red-700 mb-2">User experience gaps</h6>
+                                    <ul className="space-y-2">
+                                      <li className="flex items-start text-sm text-gray-600">
+                                        <span className="text-red-500 mr-2">•</span>
+                                        <span>No clear section navigation</span>
+                                      </li>
+                                      <li className="flex items-start text-sm text-gray-600">
+                                        <span className="text-red-500 mr-2">•</span>
+                                        <span>Missing visual aids/maps</span>
+                                      </li>
+                                      <li className="flex items-start text-sm text-gray-600">
+                                        <span className="text-red-500 mr-2">•</span>
+                                        <span>Limited social sharing options</span>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                              <div className="bg-green-50 p-4 rounded-lg border border-green-100">
+                                <div className="flex items-center mb-3">
+                                  <span className="text-green-500 mr-2">✓</span>
+                                  <p className="text-sm font-medium text-green-800">Time Out Best Practices</p>
+                                </div>
+                                <div className="space-y-4">
+                                  <div>
+                                    <h6 className="text-sm font-medium text-green-700 mb-2">Comprehensive event details</h6>
+                                    <ul className="space-y-2">
+                                      <li className="flex items-start text-sm text-gray-600">
+                                        <span className="text-green-500 mr-2">•</span>
+                                        <span>Complete venue guidelines</span>
+                                      </li>
+                                      <li className="flex items-start text-sm text-gray-600">
+                                        <span className="text-green-500 mr-2">•</span>
+                                        <span>Detailed transport options</span>
+                                      </li>
+                                      <li className="flex items-start text-sm text-gray-600">
+                                        <span className="text-green-500 mr-2">•</span>
+                                        <span>Clear bag policy</span>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                  <div>
+                                    <h6 className="text-sm font-medium text-green-700 mb-2">Enhanced user value</h6>
+                                    <ul className="space-y-2">
+                                      <li className="flex items-start text-sm text-gray-600">
+                                        <span className="text-green-500 mr-2">•</span>
+                                        <span>Support act background</span>
+                                      </li>
+                                      <li className="flex items-start text-sm text-gray-600">
+                                        <span className="text-green-500 mr-2">•</span>
+                                        <span>Full setlist information</span>
+                                      </li>
+                                      <li className="flex items-start text-sm text-gray-600">
+                                        <span className="text-green-500 mr-2">•</span>
+                                        <span>Practical tips (timing, arrival)</span>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                  <div>
+                                    <h6 className="text-sm font-medium text-green-700 mb-2">Better content structure</h6>
+                                    <ul className="space-y-2">
+                                      <li className="flex items-start text-sm text-gray-600">
+                                        <span className="text-green-500 mr-2">•</span>
+                                        <span>Clear section headings</span>
+                                      </li>
+                                      <li className="flex items-start text-sm text-gray-600">
+                                        <span className="text-green-500 mr-2">•</span>
+                                        <span>Easy navigation</span>
+                                      </li>
+                                      <li className="flex items-start text-sm text-gray-600">
+                                        <span className="text-green-500 mr-2">•</span>
+                                        <span>Mobile-optimized layout</span>
+                                      </li>
+                                    </ul>
+                                  </div>
                                 </div>
                               </div>
                             </div>
                           </div>
                           
-                          <div className="mt-4">
-                            <h5 className="text-sm font-medium text-gray-700">Article References:</h5>
-                            <ul className="list-disc list-inside mt-1 text-sm text-gray-600">
-                              <li><a href="https://www.sydneytravelguide.com.au/billie-eilish-in-sydney-guide/" className="text-blue-600 hover:underline">Sydney Travel Guide Coverage</a></li>
-                              <li><a href="https://www.timeout.com/sydney/news/heres-all-the-info-you-need-for-billie-eilishs-sydney-shows-set-list-travel-more-022325" className="text-blue-600 hover:underline">Time Out Sydney Coverage</a></li>
-                            </ul>
+                          <div className="mt-6">
+                            <h5 className="text-sm font-medium text-gray-700 mb-3">Article References:</h5>
+                            <div className="flex space-x-4">
+                              <a href="https://www.sydneytravelguide.com.au/billie-eilish-in-sydney-guide/" 
+                                 className="inline-flex items-center px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors">
+                                <DocumentTextIcon className="h-4 w-4 mr-2" />
+                                Sydney Travel Guide Coverage
+                              </a>
+                              <a href="https://www.timeout.com/sydney/news/heres-all-the-info-you-need-for-billie-eilishs-sydney-shows-set-list-travel-more-022325" 
+                                 className="inline-flex items-center px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors">
+                                <NewspaperIcon className="h-4 w-4 mr-2" />
+                                Time Out Sydney Coverage
+                              </a>
+                            </div>
                           </div>
                         </div>
                       </div>
 
-                      {/* Existing News Content and Evergreen Content sections */}
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <div className="bg-white p-4 rounded-lg border border-emerald-100">
-                          <h4 className="font-medium text-gray-900 mb-2">News Content</h4>
-                          <ul className="text-sm text-gray-600 space-y-1">
-                            <li>Current Issues:
-                              <ul className="list-disc list-inside ml-4 mt-1">
-                                <li>Not following Google News guidelines</li>
-                                <li>Poor headline optimization</li>
-                                <li>Missing news-specific metadata</li>
-                                <li>Inconsistent publishing schedule</li>
+                      {/* News and Evergreen Content */}
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div className="bg-white p-6 rounded-lg border border-emerald-100 shadow-sm hover:shadow-md transition-shadow">
+                          <h4 className="font-medium text-gray-900 mb-4 flex items-center">
+                            <ClockIcon className="h-5 w-5 mr-2 text-emerald-600" />
+                            News Content
+                          </h4>
+                          <div className="space-y-4">
+                            <div>
+                              <h5 className="text-sm font-medium text-gray-700 mb-2">Current Issues:</h5>
+                              <ul className="space-y-2">
+                                {[
+                                  'Not following Google News guidelines',
+                                  'Poor headline optimization',
+                                  'Missing news-specific metadata',
+                                  'Inconsistent publishing schedule'
+                                ].map((issue, index) => (
+                                  <li key={index} className="flex items-center text-sm text-gray-600">
+                                    <span className="text-red-500 mr-2">✗</span>
+                                    {issue}
+                                  </li>
+                                ))}
                               </ul>
-                            </li>
-                            <li>Required Improvements:
-                              <ul className="list-disc list-inside ml-4 mt-1">
-                                <li>Implement NewsArticle schema</li>
-                                <li>Optimize for news search</li>
-                                <li>Add news-specific meta tags</li>
-                                <li>Regular news updates</li>
+                            </div>
+                            <div>
+                              <h5 className="text-sm font-medium text-gray-700 mb-2">Required Improvements:</h5>
+                              <ul className="space-y-2">
+                                {[
+                                  'Implement NewsArticle schema',
+                                  'Optimize for news search',
+                                  'Add news-specific meta tags',
+                                  'Regular news updates'
+                                ].map((improvement, index) => (
+                                  <li key={index} className="flex items-center text-sm text-gray-600">
+                                    <span className="text-green-500 mr-2">✓</span>
+                                    {improvement}
+                                  </li>
+                                ))}
                               </ul>
-                            </li>
-                          </ul>
+                            </div>
+                          </div>
                         </div>
-                        <div className="bg-white p-4 rounded-lg border border-emerald-100">
-                          <h4 className="font-medium text-gray-900 mb-2">Evergreen Content</h4>
-                          <ul className="text-sm text-gray-600 space-y-1">
-                            <li>Current Issues:
-                              <ul className="list-disc list-inside ml-4 mt-1">
-                                <li>Outdated information</li>
-                                <li>Poor internal linking</li>
-                                <li>Missing user intent optimization</li>
-                                <li>Insufficient content depth</li>
+                        <div className="bg-white p-6 rounded-lg border border-emerald-100 shadow-sm hover:shadow-md transition-shadow">
+                          <h4 className="font-medium text-gray-900 mb-4 flex items-center">
+                            <BookOpenIcon className="h-5 w-5 mr-2 text-emerald-600" />
+                            Evergreen Content
+                          </h4>
+                          <div className="space-y-4">
+                            <div>
+                              <h5 className="text-sm font-medium text-gray-700 mb-2">Current Issues:</h5>
+                              <ul className="space-y-2">
+                                {[
+                                  'Outdated information',
+                                  'Poor internal linking',
+                                  'Missing user intent optimization',
+                                  'Insufficient content depth'
+                                ].map((issue, index) => (
+                                  <li key={index} className="flex items-center text-sm text-gray-600">
+                                    <span className="text-red-500 mr-2">✗</span>
+                                    {issue}
+                                  </li>
+                                ))}
                               </ul>
-                            </li>
-                            <li>Improvement Areas:
-                              <ul className="list-disc list-inside ml-4 mt-1">
-                                <li>Regular content updates</li>
-                                <li>Enhanced topic clusters</li>
-                                <li>Better user journey mapping</li>
-                                <li>Comprehensive guides</li>
+                            </div>
+                            <div>
+                              <h5 className="text-sm font-medium text-gray-700 mb-2">Improvement Areas:</h5>
+                              <ul className="space-y-2">
+                                {[
+                                  'Regular content updates',
+                                  'Enhanced topic clusters',
+                                  'Better user journey mapping',
+                                  'Comprehensive guides'
+                                ].map((improvement, index) => (
+                                  <li key={index} className="flex items-center text-sm text-gray-600">
+                                    <span className="text-green-500 mr-2">✓</span>
+                                    {improvement}
+                                  </li>
+                                ))}
                               </ul>
-                            </li>
-                          </ul>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
