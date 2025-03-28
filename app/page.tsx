@@ -1,5 +1,6 @@
-import { BellIcon, ChartBarIcon, NewspaperIcon, GlobeAltIcon, UserGroupIcon, RssIcon, CodeBracketIcon, MapIcon, ClockIcon, TableCellsIcon, ChartPieIcon } from '@heroicons/react/24/outline';
+import { BellIcon, ChartBarIcon, NewspaperIcon, GlobeAltIcon, UserGroupIcon, RssIcon, CodeBracketIcon, MapIcon, ClockIcon, TableCellsIcon, ChartPieIcon, CalendarIcon } from '@heroicons/react/24/outline';
 import GratuityCalculator from './components/GratuityCalculator';
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -11,6 +12,20 @@ export default function Home() {
             <div className="flex items-center space-x-2">
               <span className="text-xl font-bold text-blue-600">EME</span>
               <span className="text-sm text-gray-500">Traffic Growth Strategy</span>
+            </div>
+            <div className="flex items-center space-x-4">
+              <Link href="/editorial-calendar" className="flex items-center space-x-2 text-gray-600 hover:text-blue-600 transition-colors">
+                <CalendarIcon className="h-5 w-5" />
+                <span>Editorial Calendar</span>
+              </Link>
+              <Link href="/content-decay-report" className="flex items-center space-x-2 text-gray-600 hover:text-blue-600 transition-colors">
+                <CalendarIcon className="h-5 w-5" />
+                <span>Content Decay Report</span>
+              </Link>
+              <Link href="/sydney-travel-guide" className="flex items-center space-x-2 text-gray-600 hover:text-blue-600 transition-colors">
+                <CalendarIcon className="h-5 w-5" />
+                <span>Sydney Travel Guide</span>
+              </Link>
             </div>
           </nav>
         </div>
